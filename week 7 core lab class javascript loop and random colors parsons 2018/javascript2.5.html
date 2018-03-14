@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+</body>
+<script type="text/javascript">
+	
+var left = "Abby"
+var me = "Alessio"
+var right = "Robby"
+var rightright = "Leo"
+ var rightrightright = "Vivek"
+
+//containers in javascripts
+//store a container = ARRAY in computer language - multiple elements instead of single vars []
+//var classmates = ["Abby" , "Alessio" , "Robby" , "Leo" , "Vivek"];
+var classmates = [left , me , right , rightright , rightrightright];
+
+
+console.log(classmates);
+//computer start counting at zero so zero is the first element/name
+console.log( classmates[0] + 6);
+
+//add to the containes
+classmates.push("Carolyn")
+console.log(classmates);
+// console log just makes you look at things, doesn't change them
+
+
+//see javascript 2.8
+
+var randomnumber = Math.random() * 6;
+
+randomnumber = parseInt (randomnumber);
+
+console.log(randomnumber);
+
+// this randomize the name of the classmates that happens every time once at the time
+var randomClassmate = classmates[randomnumber];
+
+console.log(randomClassmate)
+
+document.body.innerHTML = randomClassmate;
+
+</script>
+</html>

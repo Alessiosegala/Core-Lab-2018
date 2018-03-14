@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<style>
+div{
+		position: absolute;
+	}
+
+</style>
+<body>
+		<div id="div"></div>
+</body>
+<script>
+
+var counter = 0;
+while(counter < 3000){
+
+var divrec = document.createElement("div");
+   
+// context.fillRect(x, y, width, height);
+ 
+var hue = parseInt(Math.random() * 36);
+var sat = parseInt(Math.random() * 60);
+var lightness = parseInt(Math.random() * 100);  
+   
+var num3 = parseInt(Math.random() * 1920);
+var x = num3 +"px";
+var num4 = parseInt(Math.random() * 1080);
+var y = num4 +"px";
+
+
+var num1 = parseInt(Math.random() * 40);
+var width = num1 +"%";
+var num2 = parseInt(Math.random() * 30);
+var height = num2 +"%";
+ 
+var color = "hsl("+hue+", "+sat+"%, "+lightness+"%)";
+
+divrec.style.backgroundColor = color;
+divrec.style.width = width;
+divrec.style.height = height;
+divrec.style.top = x;
+divrec.style.left = y;
+document.body.appendChild(divrec);
+
+//while(width < 500){
+//divrec.fillRect((rectSize+10)*i,height/2,rectSize,rectSize);
+counter = counter + 1;
+}
+            
+            
+
+</script>
+</html>
