@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	div{
+		position: absolute;
+	}
+</style>
+</head>
+<body>
+</body>
+<script>
+	
+//various ways to make a function examples:
+//Math.random()
+//document.getElementsById()
+//getHeight()
+//parseInt()
+
+// randomizer function
+//randomInt = name 
+//return means 
+
+function randomInt(){
+		var random = parseInt(Math.random()*100);
+		return random;
+}
+
+// var myInt = randomInt console.log(myInt); this is the same is just calling my randomInt as a function var instead of directally the thing
+//this is the same as above and displays a random number between 0 and 100 which is the funcution of randomInt
+console.log(randomInt());
+
+//__________________________________________________
+//give parameters to a funcyion (what in orange are the paramenters)
+
+function randomInt(low, high){
+		var random = parseInt(Math.random()*100);
+		return random;
+}
+
+var myInt = randomInt(-100, 900);
+console.log(myInt);
+
+</script>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	div{
+		position: absolute;
+	}
+</style>
+</head>
+<body>
+</body>
+<script>
+
+function randomInt(low, high){
+		var random = parseInt(Math.random()*(high-low)+low);
+		return random;
+}
+
+//whileloop
+var counter =0;
+while(counter < 300)
+//function 
+{
+var d = document.createElement("div");
+d.style.backgroundColor = "hsl("+randomInt(0,360)+", 100%, 50%";
+//changes width and height changing numbers 
+d.style.width = randomInt(10,500) + "px";
+d.style.height = randomInt(10,500) + "px";
+document.body.appendChild(d);
+
+counter=counter +1;
+}
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input type="file" id="files">
+<pre id = "contents"></pre>
+</body>
+<script type="text/javascript">
+	//pre hold text like div but keep if fixed
+	//the line on body makes you pick a file from your computer but doesn not display it
+	// the script will style/add a function/interaction to it show the actual file from your computer
+
+document.getElementById ("files").onchange = function(){
+	var file = document.getElementById("files").files[0];
+	console.log(file);
+	var reader = new FileReader();
+	reader.onloadend = function(event){
+		console.log(event.target.result);
+		document.getElementById("contents").innerHTML = event.target.result;
+	}
+	
+	reader.readAsText(file);
+
+}
+
+</script>
+</html>

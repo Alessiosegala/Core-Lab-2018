@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>		
+
+	p{
+		margin:0;
+		position:absolute;
+		font-size: 4em;
+		color: brown;
+		font-family: Helvetica, Sans-Serif;
+	}
+
+	</style>
+	
+</head>
+<body>
+</body>
+<script>
+function randomInt(low, high){
+		var random = parseInt(Math.random()*(high-low)+low);
+		return random;
+}
+
+	var array = [];
+	
+	//document.onmousedown = function(event){
+	document.onmousemove = function(event){
+			var letter = document.createElement("p");
+			letter.velocity = 1;
+			letter.style.top = event.y + "px";
+			letter.style.left = event.x + "px";
+			letter.style.transform = "rotate(" +randomInt(-30,30)+ "deg)";
+			var allLetters = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
+			letter.innerHTML = "almost Undefined"
+			//allLetters[ parseInt(Math.random()*allLetters.length) ];
+			document.body.appendChild(letter);
+			array.push(letter);
+	}
+
+	function loop(){
+		var counter = 0 
+		while(counter < array.length){
+		//console.log(array[counter].innerHTML);
+
+		var letter = array[counter];
+		var y = parseInt (letter.style.top);
+		y = y + letter.velocity;
+		letter.velocity = letter.velocity + 0.1;
+		//if what in if( ) is true is going to run it otherwise is going to skip this line of code
+		//this values set the line where they bounce
+		if(y > window.innerHeight-150){
+			y= window.innerHeight-150;
+			//this value is how much they bounce back
+			letter.velocity = -letter.velocity * .73;
+		}
+
+		letter.style.top = y + "px";
+
+			counter = counter +1;
+		}
+	}
+
+//this is how you make animations in javascript 
+setInterval(loop, 1000/60);
+
+</script>
+
+</html>

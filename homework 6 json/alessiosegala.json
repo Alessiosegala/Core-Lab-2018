@@ -1,0 +1,17 @@
+{
+	"name": ["alessio", "segala"],
+	"home": {
+		"latitude": 45.526439,
+		"longitude": 11.3299084
+	},
+	"url": "http://alessiosegala.com",
+	"favorites": {
+		"color": "ffffff",
+		"book": {
+			"author": "Ernest Hemingway", 
+			"title": "The Old Man and the Sea"
+		},
+		"tool": "camera",
+		"temperature": 20
+	}
+}

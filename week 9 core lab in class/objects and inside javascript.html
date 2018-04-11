@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+</body>
+<script type="text/javascript">
+
+// object = a description and a variable/value
+//array [] --> var array = []
+//object {} --> var object = {}
+//ex of an object with weather
+var weather = {
+	"temperature" : 48.15, 
+	"chanceofrain" : .1,
+	"humidity" : .5
+}
+
+console.log(weather);
+
+//how to take something out of an object
+// weather["temperature"]
+console.log(weather["temperature"]);
+
+//array with array inside of it
+
+var doublearray = [
+["apple" , "pear"],
+["strawberry" , "blueberry"],
+["coffee" , "milk"]
+
+]
+// pull out a specific ARRAY INSIDE ARRAY
+//console.log ( doublearray ); this shows you what inside array
+//how to take blueberry
+console.log ( doublearray [1] [1] );
+
+//or (is the same)
+//basically takes the inside of the inside of the array
+
+var innerArray = doublearray[1];
+console.log (innerArray[1]);
+
+//OBJECT INSIDE OBJECT
+
+var classmates = {
+	"Alessio" : {
+		"breakfast" : "juice" ,
+		"animal" : "squirrel" , 
+	}, 
+	"Robby" : {
+		"breakfast" : "scramble eggs" ,
+		"animal" : "elephant"
+	},
+	"Dahee" : {
+		"breakfast" : "french toast" ,
+		"animal" : "goat"
+	}
+}
+
+console.log(classmates);
+
+// pull out a specific OBJECT INSIDE OBJECT
+console.log(classmates ["Alessio"] ["animal"]);
+console.log(classmates ["Dahee"] ["animal"]);
+
+// ARRAY STORE WITH NUMBERS OBJECTS STORE WITH NAMES
+
+// pull off something in an object inside an array 
+// console.log( weather["minutely"] ["data"] [0] ["precipProbability"] )
+
+</script>
+</html>

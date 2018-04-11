@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	div{
+		position: absolute;
+	}
+</style>
+</head>
+<body>
+</body>
+<script>
+
+function randomInt(low, high){
+		var random = parseInt(Math.random()*(high-low)+low);
+		return random;
+}
+
+//makes the function work only when you click the mouse
+document.onmousedown = function(event){
+// this also console log the position of where you click on the screen x, y,
+//console.log(event)
+
+//function
+var d = document.createElement("div");
+d.style.backgroundColor = "hsl("+randomInt(5,0)+", 100%, 50%";
+
+var width = randomInt(10,100);
+var height = randomInt(10,1000);
+
+//changes width and height changing numbers 
+d.style.width = width + "px";
+d.style.height = height + "px";
+
+//creates the rectangle where you click with the mouse 
+d.style.top = event.y -height/2 + "px";
+d.style.left = event.x -width/2 + "px";
+
+
+
+
+
+
+document.body.appendChild(d);
+
+
+}
+</script>
+</html>

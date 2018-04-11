@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Enter a number:</h1>
+<input type="text" id= "textfield">
+<button id="feelme">you feel me?</button>
+
+<h1 id="header"> </h1>
+
+</body>
+
+<script type="text/javascript">
+//what in the body creates a space where to write in and a button 
+//this gaves function/interaction to the botton
+
+document.getElementById("feelme").onclick = function(){
+var text = document.getElementById("textfield").value;
+console.log(text);
+var number = parseFloat(text);
+console.log(number);
+var halved = number / 2;
+document.getElementById("header").innerHTML = halved;
+
+// DIVIDE
+
+}
+</script>
+
+</html>
